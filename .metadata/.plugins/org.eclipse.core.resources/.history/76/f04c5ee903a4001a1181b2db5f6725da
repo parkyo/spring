@@ -1,0 +1,20 @@
+package basic1;
+
+import basic1.entity.Exam;
+import basic1.entity.NewLecExam;
+import basic1.ui.ExamConsole;
+import basic1.ui.GridExamConsole;
+import basic1.ui.InLineExamConsole;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Exam exam = new NewLecExam ();
+//		ExamConsole cons = new InLineExamConsole(exam);
+		ExamConsole cons = new GridExamConsole();
+		cons.setExam(exam);
+		cons.print();
+	} 
+	
+
+}

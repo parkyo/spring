@@ -1,0 +1,17 @@
+ package basic1.ui;
+
+import basic1.entity.Exam;
+
+public class GridExamConsole implements ExamConsole {
+	private Exam exam;
+	
+	
+	public GridExamConsole(Exam exam) {
+		this.exam = exam;
+	}
+	@Override
+	public void print() {
+		System.out.printf("grid exam is %f, %d", exam.total(), exam.avg());
+	}
+
+}

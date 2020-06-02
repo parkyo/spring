@@ -1,0 +1,51 @@
+package basic1.entity;
+
+public class NewLecExam implements Exam {
+
+	private int kor;
+	private int math;
+	private int bio;
+	
+	public NewLecExam(int kor, int math, int bio){
+		this.kor = kor;
+		this.math = math;
+		this.bio = bio;
+	}
+	
+	@Override
+	public int total(){
+		return kor + math + bio;
+	}
+	
+	@Override
+	public int avg() {
+		return total()/3;
+	}
+
+	public int getKor() {
+		return kor;
+	}
+
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+
+	public int getMath() {
+		return math;
+	}
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+
+	public int getBio() {
+		return bio;
+	}
+
+	public void setBio(int bio) {
+		this.bio = bio;
+	}
+	
+	
+	
+}

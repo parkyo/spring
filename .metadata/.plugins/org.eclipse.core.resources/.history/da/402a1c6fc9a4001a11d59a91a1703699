@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Exam exam = new NewlecExam(); -->
+	<bean id = "exam" class = "basic1.entity.NewLecExam" >
+		<!-- DI using setters -->
+		<property name = "kor" value = "20" /> 
+		<property name = "math" value = "10" />
+		<property name = "bio" value = "50" />
+	</bean> 
+	<bean id = "console" class = "basic1.ui.InLineExamConsole" > 
+		<!-- console.setExam(exam) -->
+		<property name = "exam"  ref = "exam"/>
+	</bean> 
+	<bean id = "exams" class = "java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<bean class = "basic1.entity.NewLecExam" p:kor = "10"></bean>
+				<ref bean = "exam"/>
+			</list>
+	
+		</constructor-arg>
+	</bean>
+	
+</beans>

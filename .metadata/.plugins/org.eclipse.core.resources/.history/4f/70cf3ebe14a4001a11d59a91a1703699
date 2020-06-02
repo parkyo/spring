@@ -1,0 +1,19 @@
+package basic1.entity;
+
+public class NewLecExam implements Exam {
+
+	private int kor;
+	private int math;
+	private int bio;
+	
+	@Override
+	public int total(){
+		return kor + math + bio;
+	}
+	
+	@Override
+	public int avg() {
+		return total()/3;
+	}
+	
+}

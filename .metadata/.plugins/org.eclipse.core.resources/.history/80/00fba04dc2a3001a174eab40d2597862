@@ -1,0 +1,11 @@
+package basic1.ui;
+
+public class InLineExamConsole implements ExamConsole {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
